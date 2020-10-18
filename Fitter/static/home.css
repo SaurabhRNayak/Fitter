@@ -1,0 +1,211 @@
+
+body{
+    background-color: black;
+    color: white;
+    height:100%;
+    background-image: url('./school-doodle.jpg');
+    opacity: 1;
+    margin: 0;
+    padding:0;
+    background-size:cover;
+    background-position:center;
+}
+.intro {
+    height: 100%;
+    /* background: #133955; */
+    /* background: -webkit-linear-gradient(top left, #133955, #DD6FD6);
+    background: -moz-linear-gradient(top left, #133955, #DD6FD6); */
+    /* background: linear-gradient(to bottom right, #c6e050,#F85C51); */
+    /* opacity: 0.5; */
+    /* animation: change 10s ease-in-out infinite; */
+    background-size: 110% 110%;
+    position: relative;
+ }
+ .navbar {
+    width: 100%;
+    background-color: rgb(65, 63, 63);
+    overflow: auto;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #name {
+    float: right;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #000;
+    
+  }
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  .active {
+    background-color: #e4e713;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+
+/* flex boxes */
+.flex-container {  
+    display: -webkit-flex;  
+    display: flex;  
+    flex-wrap: wrap;
+    width: 100%;  
+    height: auto; 
+    flex-direction: row;
+    justify-content: space-evenly; 
+    background-color: rgba(255, 255, 255, 0.123); 
+}
+.flex-item {  
+    background-color:  rgba(247, 243, 7, 0.884);  
+    width: 200px;
+    box-shadow: 0 4px 6px #000;
+    z-index: 2;
+    border-radius: 20px;
+    /* border-color: #f04f44; */
+    border: 3px solid #fcfcfc;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    /* -webkit-text-size-adjust: auto; */
+    color: rgba(255, 252, 251, 0.89);
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0 2px 3px rgb(12, 11, 24);
+    
+}
+.num{
+    font-size: 100px;
+}
+
+
+.flex-container1 {  
+  display: -webkit-flex;  
+  display: flex;  
+  /* flex-wrap: wrap; */
+  width: 100%;  
+  height: auto; 
+  flex-direction: row;
+  justify-content: space-evenly; 
+  background-color: rgba(255, 255, 255, 0.123); 
+}
+.flex-item1 {  
+  background-color:  rgba(0, 255, 115, 0.884);
+  width: 50%;
+  box-shadow: 0 4px 6px #000;
+  z-index: 2;
+  border-radius: 20px;
+  /* border-color: #f04f44; */
+  border: 3px solid #fcfcfc;
+  height: auto;
+  margin: 10px;
+  text-align: center;
+  /* -webkit-text-size-adjust: auto; */
+  color: rgba(27, 63, 3, 0.89);
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 0 2px 3px rgb(255, 255, 255);
+}
+.topic {
+  text-align: left;
+  color:rgba(255, 252, 251); 
+  text-shadow: 0 2px 3px rgb(0, 0, 0);
+  font-size: 20;
+}
+.detail{
+  text-align: left;
+  list-style: none;
+  color:rgb(255, 252, 251);
+  text-shadow: 0 2px 3px rgb(0, 0, 0);
+  font-size: 15;
+}
+.flex-container2 {  
+  display: -webkit-flex;  
+  display: flex;  
+  /* flex-wrap: wrap; */
+  width: 100%;  
+  height: auto; 
+  flex-direction: row;
+  justify-content: space-evenly; 
+  background-color: rgba(255, 255, 255, 0.123); 
+}
+.flex-item2 { 
+  background-color: rgba(253, 8, 8, 0.884);
+  width: 50%;
+  box-shadow: 0 4px 6px #000;
+  z-index: 2;
+  border-radius: 20px;
+  /* border-color: #f04f44; */
+  border: 3px solid #fcfcfc;
+  height: auto;
+  margin: 10px;
+  text-align: center;
+  /* -webkit-text-size-adjust: auto; */
+  color: rgba(255, 252, 251, 0.89);
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 0 2px 3px rgb(12, 11, 24);
+}
+.chart_topic{
+  text-align: center;
+}
+canvas{
+  margin: 0 auto;
+  width: inherit;
+  }
+  .imacon {
+    position: relative;
+    width: 80%;
+    height:20%;
+    
+  }
+  .imacon:hover .overlay {
+    opacity: 1;
+  }
+  .image {
+    display: block;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    border-radius: 20px;    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #06151a;
+  }
+  .text {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  a { color: inherit; } 

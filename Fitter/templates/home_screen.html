@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"> </script>
+    <!-- <script src="{{ url_for('static', filename='/Chartmin.js')}}"></script> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/home.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Home</title>
+</head>
+<body>
+    <header class="intro">
+        <div class="navbar">
+            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="./forum"><i class="fa fa-fw fa-question-circle"></i> Forum</a>
+            <a href="./blog"><i class="fas fa-blog"></i> Blogs</a>
+            <a href="./leaderboard"><i class="fa fa-fw fa-trophy"></i> Leaderboard</a>
+            <a id="name"><i class="fa fa-fw fa-user"></i> &nbsp; Welcome {{user_name.name}}</a>
+          </div>
+          <div class="flex-container">  
+            <div class="flex-item"><div class="num">{{values[0]}}</div> BMI</div>  
+            <div class="flex-item"><div class="num">{{values[1]}}</div> Calories Burnt</div>  
+            <div class="flex-item"><div class="num">{{values[2]}}</div> Points Scored</div>  
+          </div>
+          
+          <br>
+
+          <div class="flex-container1">  
+            <div class="flex-item1"> <H1>Workouts</H1>
+              <ul>
+              {% for i in Q.keys():%}
+              <div class=imacon>
+              <img src={{i}} alt="img" class="image">
+              <div class="overlay">
+                <div class="text"><a href="./timer">{{Q[i]}}</a></div>
+              </div>            
+            </div>
+              <br>
+              {%endfor%}
+            </ul>
+            </div>  
+            <div class="flex-item1"> <H1>Favourites</H1>  
+              <ul>
+                {% for i in QA.keys():%}
+                <div class=imacon>
+                <img src={{i}} alt="img" class="image">
+                <div class="overlay">
+                  {% if QA[i]=="Bicep Curls"%}
+                    <div class="text"><a href="./bicep_curl">{{QA[i]}}</a></div>
+                  {%else%}
+                    <div class="text"><a href="./timer">{{QA[i]}}</a></div>
+                  {%endif%}
+                  </div>            
+              </div>
+                <br>
+                {%endfor%}
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex-container2">  
+            <div class="flex-item2">
+              <canvas id="myChart" width="600" height="400"></canvas>
+                <script>// Global parameters:
+                  // do not resize the chart canvas when its container does (keep at 600x400px)
+                  Chart.defaults.global.responsive = true;
+                  var options = {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    fontSize: 20,
+                                    fontColor:"rgb(255,255,255)"
+                                }
+                            }],
+                            xAxes: [{
+                                ticks: {
+                                    fontSize: 15,
+                                    fontColor:"rgb(255,255,255)"
+                                }
+                            }]
+                        },
+                        "legend": {
+                          "display": true,
+                          "labels": {
+                              fontSize: 20,
+                              fontColor:"rgb(255,255,255)"
+                          }
+                      },
+                    }
+                  // define the chart data
+                  var chartData = {
+                    labels : [{% for item in labels %}
+                              "{{item}}",
+                              {% endfor %}],
+                    datasets : [{
+                        label: '{{ legend }}',
+                        fill: true,
+                        lineTension: 0.1,
+                        backgroundColor: "rgba(255,255,255,0.5)",
+                        // hoverBackgroundColor:"rgba(255,0,0,1)",
+                        borderColor: "rgba(230, 96, 24, 0.91)",
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "rgba(230, 96, 24, 0.91)",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 2,
+                        pointHoverRadius: 7,
+                        pointHoverBackgroundColor: "rgba(230, 96, 24, 0.91)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 5,
+                        pointHitRadius: 10,
+                        data : [{% for item in values %}
+                                  {{item}},
+                                {% endfor %}],
+                        spanGaps: false
+                    }]
+                  }
+                  
+                  // get chart canvas
+                  var ctx = document.getElementById("myChart").getContext("2d");
+                  
+                  // create the chart using the chart canvas
+                  var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: chartData,
+                    options:options,
+                  });</script>
+                <p id="chat_topic">Performance</p>
+            </div>  
+          </div>
+           
+    </header>
+    
+</body>
+</html>
+
+
+
+
+
+
+

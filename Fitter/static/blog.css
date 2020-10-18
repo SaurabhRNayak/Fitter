@@ -1,0 +1,95 @@
+
+body{
+    background-color: black;
+    color: white;
+    height:100%;
+    opacity: 1;
+    margin: 0;
+    padding:0;
+    background-size:cover;
+    background-position:center;
+}
+.intro {
+    height: 100%;
+    /* background: #133955; */
+    /* background: -webkit-linear-gradient(top left, #133955, #DD6FD6);
+    background: -moz-linear-gradient(top left, #133955, #DD6FD6); */
+    /* background: linear-gradient(to bottom right, #c6e050,#F85C51); */
+    /* opacity: 0.5; */
+    /* animation: change 10s ease-in-out infinite; */
+    background-size: 110% 110%;
+    position: relative;
+ }
+ .navbar {
+    width: 100%;
+    background-color: rgb(65, 63, 63);
+    overflow: auto;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #name {
+    float: right;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #000;
+    
+  }
+  .navbar a:hover {
+    background-color: #000;
+    color: white;
+  }
+  
+  .active {
+    background-color: rgb(228, 140, 9);
+    color:black;
+    /* text-emphasis-color: black; */
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+
+/* flex boxes */
+
+.flex-container1 {  
+  display: -webkit-flex;  
+  display: flex;  
+  /* flex-wrap: wrap; */
+  width: 100%;  
+  height: auto; 
+  flex-direction: row;
+  justify-content: space-evenly; 
+  background-color: rgba(255, 255, 255, 0.123); 
+}
+.flex-item1 {  
+  background-color:  rgba(238, 241, 33, 1);
+  width: 70%;
+  box-shadow: 0 4px 6px #000;
+  z-index: 2;
+  border-radius: 20px;
+  /* border-color: #f04f44; */
+  border: 3px solid #fcfcfc;
+  height: auto;
+  padding-right: 15px;
+  margin: 10px;
+  text-align: left;
+  /* -webkit-text-size-adjust: auto; */
+  color: rgba(0, 0, 0, 0.89);
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  /* text-shadow: 0 2px 3px rgb(12, 11, 24); */
+}

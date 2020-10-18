@@ -1,0 +1,76 @@
+{
+  "values": [
+    {
+      "id": "1",
+      "Author": "abc",
+      "question": "> How many reps of abs workout should a beginer do?",
+      "answer_ind": "False",
+      "answer": "",
+      "ans_author": "Admin"
+    },
+    {
+      "id": "2",
+      "Author": "def",
+      "question": "> Recommend some dumbell excercises.",
+      "answer_ind": "False",
+      "answer": "",
+      "ans_author": "Admin"
+    },
+    {
+      "id": "3",
+      "Author": "def",
+      "question": "> What is optimal rest time for an excercise",
+      "answer_ind": "False",
+      "answer": null,
+      "ans_author": null
+    },
+    {
+      "id": "4",
+      "Author": "abc",
+      "question": "> Is there any experianced trainer available for virtual classes?",
+      "answer_ind": "False",
+      "answer": null,
+      "ans_author": null
+    },
+    {
+      "id": "5",
+      "Author": "def",
+      "question": "> How to gain proper diet with home food?",
+      "answer_ind": "False",
+      "answer": null,
+      "ans_author": null
+    },
+    {
+      "id": "5",
+      "Author": "def",
+      "question": "> Suggest some vegan diets",
+      "answer_ind": "False",
+      "answer": null,
+      "ans_author": null
+    },
+    {
+      "id": "5",
+      "Author": "def",
+      "question": "> How often is leg workout to be done in a week?",
+      "answer_ind": "False",
+      "answer": null,
+      "ans_author": null
+    },
+    {
+      "id": "5",
+      "Author": "def",
+      "question": "> Body weight workout or gym workout?",
+      "answer_ind": "False",
+      "answer": null,
+      "ans_author": null
+    },
+    {
+      "id": "5",
+      "Author": "def",
+      "question": "> Are there any protien suppliments for vegans?",
+      "answer_ind": "False",
+      "answer": null,
+      "ans_author": null
+    }
+  ]
+}

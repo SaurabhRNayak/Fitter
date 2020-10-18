@@ -1,0 +1,20 @@
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+    <title>Login</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/loginn.css') }}">
+</head>
+    <div id="login">
+      <form name='form-login' action="/home" method="POST">
+        <span class="fontawesome-user"></span>
+          <input type="text" id="user" name="Username" placeholder="Username">
+       
+        <span class="fontawesome-lock"></span>
+          <input type="password" id="pass" name="password" placeholder="Password">
+        
+        <input type="submit" value="Login">
+        <a href=new_user><input type="button" value="Sign up"></a>
+
+</form>

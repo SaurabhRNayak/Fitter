@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/blog.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Blog</title>
+</head>
+<body>
+    <header class="intro">
+        <div class="navbar">
+            <a class="active" href="./home"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="./forum"><i class="fa fa-fw fa-question-circle"></i> Forum</a>
+            <a href="./blog"><i class="fas fa-blog"></i> Blogs</a>
+            <a href="./leaderboard"><i class="fa fa-fw fa-trophy"></i> Leaderboard</a>
+            <a id="name"><i class="fa fa-fw fa-user"></i> &nbsp; Welcome {{user_name.name}}</a>
+        </div>
+        <div class="flex-container1">  
+            <div class="flex-item1"> 
+              <ul>
+              {% for i in blogs:%}
+               {% if "<Heading*>" in i:%}
+                    <H1>{{i.replace("<Heading*>","")}}</H1>
+                {%elif "<Author*>" in i:%}
+                    <h2>{{"-"+i.replace("<Author*>","")}}</h2>
+                {%else%}
+                    {{i}}
+                {%endif%}
+                
+              <br>
+              {%endfor%}
+               </ul>
+            </div>
+        </div>
+</body>
+</html>
