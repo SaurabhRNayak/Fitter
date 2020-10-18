@@ -153,7 +153,7 @@ def forum_ans_sub():
             i['answer_ind'] = "True"
             i['ans_author'] = s.name
             json.dump(
-                d, open("./flask_app/static/forum_content.json", "w"), indent=2)
+                d, open("./static/forum_content.json", "w"), indent=2)
             break
     return redirect(url_for('forum'))
 
